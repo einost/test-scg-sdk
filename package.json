@@ -1,0 +1,10 @@
+{
+  "name": "test-scg-sdk",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Modules of test-scg",
+  "main": "index.js",
+  "repository": "https://github.com/einost/test-scg-sdk.git",
+  "author": "",
+  "license": "MIT"
+}
