@@ -59,7 +59,7 @@ const findOne = async (query) => {
   }
 }
 
-const findById = id => {
+const findById = async id => {
   try {
     const query = { _id: id }
     return await VendingMachine.findOne(query)
