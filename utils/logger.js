@@ -1,7 +1,7 @@
 const moment = require('moment')
 const colors = require('colors')
 
-const evnetLog = request => {
+const eventLog = request => {
   const { responded, received, id } = request.info
   const method = request.method.toUpperCase()
   const url = `${request.url}`
@@ -34,5 +34,5 @@ const evnetLog = request => {
 }
 
 module.exports = {
-  evnetLog
+  eventLog
 }
