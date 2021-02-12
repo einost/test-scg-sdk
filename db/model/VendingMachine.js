@@ -1,3 +1,4 @@
+const _ = require('underscore')
 const VendingMachine = require('../schema/vending-machine')
 
 const getList = async (query = {}, page = 1, limit = 10, sort = { createdAt: -1 }) => {

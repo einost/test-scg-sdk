@@ -4,32 +4,38 @@ const paginate = require('mongoose-paginate-v2')
 
 const VendingMachineSchema = new Mongoose.Schema(
   {
+    statusId: {
+      type: Number,
+      required: true
+    },
     machineType: {
       type: String
     },
-    statusId: {
-      type: Number
-    },
     lat: {
-      type: Number,
+      type: Number
     },
     lng: {
       type: Number
     },
     Address: {
       type: String,
+      required: true
     },
     province: {
-      type: String
+      type: String,
+      required: true
     },
     district: {
-      type: String
+      type: String,
+      required: true
     },
     subDistrict: {
-      type: String
+      type: String,
+      required: true
     },
     zipCode: {
-      type: String
+      type: String,
+      required: true
     }
   },
   {
