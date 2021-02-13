@@ -1,3 +1,4 @@
 module.exports = {
-  Logger: require('./logger')
+  Logger: require('./logger'),
+  Email: require('./email')
 }
