@@ -13,8 +13,7 @@ const AdminSchema = new Mongoose.Schema(
       required: true
     },
     role: {
-      type: String,
-      required: true
+      type: Number
     },
     firstName: {
       type: String,
