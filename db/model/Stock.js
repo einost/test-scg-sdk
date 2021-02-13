@@ -30,7 +30,7 @@ const update = async (id, data) => {
 
 const find = async query => {
   try {
-    return await Stock.find(query).populate('product')
+    return await Stock.find(query).populate({ path: 'productId', select: 'productCode name price' })
   } catch (error) {
     console.log(error)
     return []
@@ -39,7 +39,7 @@ const find = async query => {
 
 const findOne = async (query) => {
   try {
-    return await Stock.findOne(query).populate('product')
+    return await Stock.findOne(query).populate({ path: 'productId', select: 'productCode name price' })
   } catch (error) {
     console.log(error)
     return null
@@ -49,7 +49,7 @@ const findOne = async (query) => {
 const findByVendingMachineId = async id => {
   try {
     const query = { vendingMachineId: id }
-    return await Stock.findOne(query).populate('product')
+    return await Stock.findOne(query).populate({ path: 'productId', select: 'productCode name price' })
   } catch (error) {
     console.log(error)
     return null
@@ -59,7 +59,7 @@ const findByVendingMachineId = async id => {
 const findByProductId = async id => {
   try {
     const query = { productId: id }
-    return await Stock.findOne(query).populate('product')
+    return await Stock.findOne(query).populate({ path: 'productId', select: 'productCode name price' })
   } catch (error) {
     console.log(error)
     return null
