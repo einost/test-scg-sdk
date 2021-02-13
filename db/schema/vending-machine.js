@@ -17,7 +17,7 @@ const VendingMachineSchema = new Mongoose.Schema(
     lng: {
       type: Number
     },
-    Address: {
+    address: {
       type: String,
       required: true
     },
