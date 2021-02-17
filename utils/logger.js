@@ -21,7 +21,10 @@ const eventLog = request => {
   message += `method: ${method}\n`
   message += `url: ${url}\n`
   message += `headers: ${JSON.stringify(headers, null, 2)}\n`
-  message += `body: ${JSON.stringify(body, null, 2)}\n`
+  message += `body: ${JSON.stringify({
+    ...body,
+    password: 'detected to remove'
+  }, null, 2)}\n`
   if (response) {
     message += `response: ${JSON.stringify(JSON.parse(request.response._payload._data), null, 1)}\n`
   }
